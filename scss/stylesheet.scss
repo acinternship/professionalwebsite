@@ -1,0 +1,169 @@
+/* SCSS organized alphabetically in the following order:
+ *
+ * VARIABLES & IMPORTS
+ *    Imports
+ *    Fonts
+ *    Colors
+ *
+ * STYLE
+ *    Tags
+ *    Classes
+ *    IDs
+ *
+ * @ RULES
+ *    Media Queries
+ */
+
+// VARIABLES
+
+// Imports
+@import 'https://fonts.googleapis.com/css?family=Assistant:200,400,600';
+
+// Fonts
+$serif: 'Assistant', sans-serif;
+
+$bold: 600;
+$regular: 400;
+$thin: 100;
+
+// Colors
+$black: #212121;
+$blue: #00BCD4;
+$green: #CDDC39;
+$purple: #9C27B0;
+$red: #F44336;
+$white: #FFFFFF;
+
+// STYLE
+
+// Tags
+i {
+  padding: 0 .5em;
+  transition: color 250ms ease-in-out;
+}
+
+// Classes
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center
+}
+
+.flex-spacebetween {
+  justify-content: space-between;
+}
+
+.header-option {
+  color: #FFFFFF;
+  font-family: $serif;
+  font-size: 2em;
+  font-weight: $thin;
+  width: inherit;
+}
+
+.profile > img {
+  border-radius: 50%;
+}
+
+.width-full {
+  width: 100%;
+}
+
+// IDs
+
+#header-design {
+  background-color: $green;
+}
+
+#header-drawings {
+  background-color: $red;
+}
+
+#header-main {
+  background-color: $black;
+  
+  a:hover, i:hover {
+    color: $purple;
+  }
+}
+
+#header-work {
+  background-color: $blue;
+}
+
+#hidden-menu {
+  font-size: 0.8em;
+  position: absolute;
+  width: inherit;
+  top: -100%;
+}
+
+// @ RULES
+
+// Media Queries
+@media (min-width: 800px) {
+}
+
+@media (min-width: 481px) and (max-width: 799px) {
+}
+
+@media only screen and (max-device-width: 480px) {
+  html, body {
+    font-size: 1.75em;
+  }
+  
+  .header-option {
+    height: 1.75em;
+  }
+  
+  .profile {
+    margin: 2em 0;
+    
+    img {
+      display: block;
+      padding: 1em 0;
+      width: 50%;
+    }
+    
+    span {
+      font-family: $serif;
+      font-weight: $thin;
+      text-align: center;
+    }
+    
+    span:first-of-type {
+      font-size: 3em;
+    }
+  }  
+}
+
+@media (max-width: 480px) {
+  .header-option {
+    height: 1.75em;
+  }
+  
+  .profile {
+    margin: 2em 0;
+    
+    img {
+      display: block;
+      padding: 1em 0;
+      width: 50%;
+    }
+    
+    span {
+      font-family: $serif;
+      font-weight: $thin;
+      text-align: center;
+    }
+    
+    span:first-of-type {
+      font-size: 3em;
+    }
+  }  
+}

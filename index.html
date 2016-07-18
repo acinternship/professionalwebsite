@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="css/ionicons.css">
+    
+    <!-- JavaScript -->
+    <script src="index.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+    <header class="flex-col width-full">
+      <div id="hidden-menu">
+        <a>
+          <div class="flex-row header-option" id="header-drawings">
+            <i class="icon ion-ios-compose-outline"></i>
+            drawings
+          </div>
+        </a>
+        <a>
+          <div class="flex-row header-option" id="header-design">
+            <i class="icon ion-ios-browsers-outline"></i>
+            design
+          </div>
+        </a>
+        <a>
+          <div class="flex-row header-option" id="header-work">
+            <i class="icon ion-ios-briefcase-outline"></i>
+            work
+          </div>
+        </a>
+      </div>
+      
+      <div class="flex-row flex-spacebetween header-option" id="header-main">
+        <i class="icon ion-navicon"></i>
+        <a onclick="slideIn('hidden-menu')">
+          <i class="icon ion-ios-arrow-up"></i>
+        </a>
+      </div>
+    </header>
+    
+    <aside class="flex-col">
+      <div class="flex-col profile">
+        <img src="img/profile.jpeg" alt="Pedro Felipe Froes">
+        <span>Hello</span>
+        <span>
+          My name is Pedro<br>
+          and I'm a Computer Engineer to be<br>
+          who's really excited to mix<br>
+          programming and creativity together.<br>
+          Check out some of my work below!
+        </span>
+      </div>
+    </aside>
+  </body>
+</html>
