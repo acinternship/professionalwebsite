@@ -1,9 +1,11 @@
-/* SCSS organized alphabetically in the following order:
+/* SCSS organized alphabetically
+ * in the following order:
  *
- * VARIABLES & IMPORTS
+ * IMPORTS & VARIABLES
  *    Imports
- *    Fonts
  *    Colors
+ *    Fonts
+ *    Font weights
  *
  * STYLE
  *    Tags
@@ -11,12 +13,37 @@
  *    IDs
  *
  * @ RULES
+ *    Mixins
  *    Media Queries
  */
+/* IMPORTS & VARIABLES */
 @import "https://fonts.googleapis.com/css?family=Assistant:200,400,600";
-i {
-  padding: 0 .5em;
-  transition: color 250ms ease-in-out; }
+/* STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+a:hover {
+  cursor: pointer; }
+
+.social-container {
+  margin: 1em 0;
+  width: auto; }
+  .social-container a {
+    border: 1px solid #212121;
+    border-radius: 50%;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 .5em;
+    text-align: center;
+    transition: all 250ms ease-in-out;
+    width: 2em; }
+  .social-container a:hover {
+    border: 1px solid #9C27B0;
+    color: #9C27B0; }
+  .social-container i {
+    font-size: 1.5em; }
 
 .flex-col {
   display: flex;
@@ -30,12 +57,24 @@ i {
 .flex-spacebetween {
   justify-content: space-between; }
 
-.header-option {
+.header-bar {
   color: #FFFFFF;
   font-family: "Assistant", sans-serif;
   font-size: 2em;
-  font-weight: 100;
-  width: inherit; }
+  font-weight: 200;
+  height: 1.5em;
+  margin: .25em 0;
+  transition: all 250ms ease-in-out; }
+  .header-bar i, .header-bar span {
+    padding: 0 .5em;
+    transition: all 250ms ease-in-out; }
+
+.header-bar:hover a > i, .header-bar:hover a > span {
+  transform: scale(1.15); }
+
+.header-container .header-bar {
+  background-position: left;
+  background-size: auto; }
 
 .profile > img {
   border-radius: 50%; }
@@ -44,48 +83,23 @@ i {
   width: 100%; }
 
 #header-design {
-  background-color: #CDDC39; }
+  background-color: #4CAF50;
+  background-image: url(../img/header/design.png);
+  margin: 0; }
 
 #header-drawings {
-  background-color: #F44336; }
-
-#header-main {
-  background-color: #212121; }
-  #header-main a:hover, #header-main i:hover {
-    color: #9C27B0; }
+  background-color: #F44336;
+  background-image: url(../img/header/drawings.png); }
 
 #header-work {
-  background-color: #00BCD4; }
+  background-color: #3F51B5;
+  background-image: url(../img/header/work.png); }
 
-#hidden-menu {
-  font-size: 0.8em;
-  position: absolute;
-  width: inherit;
-  top: -100%; }
+#header-design:hover, #header-drawings:hover, #header-work:hover {
+  background-position: right; }
 
-@media only screen and (max-device-width: 480px) {
-  html, body {
-    font-size: 1.75em; }
-
-  .header-option {
-    height: 1.75em; }
-
-  .profile {
-    margin: 2em 0; }
-    .profile img {
-      display: block;
-      padding: 1em 0;
-      width: 50%; }
-    .profile span {
-      font-family: "Assistant", sans-serif;
-      font-weight: 100;
-      text-align: center; }
-    .profile span:first-of-type {
-      font-size: 3em; } }
+/* @ RULES */
 @media (max-width: 480px) {
-  .header-option {
-    height: 1.75em; }
-
   .profile {
     margin: 2em 0; }
     .profile img {
@@ -94,9 +108,18 @@ i {
       width: 50%; }
     .profile span {
       font-family: "Assistant", sans-serif;
-      font-weight: 100;
+      font-weight: 200;
       text-align: center; }
     .profile span:first-of-type {
-      font-size: 3em; } }
+      font-size: 3em; }
+
+  #header-main {
+    background-color: #212121;
+    height: 2em;
+    margin: 0; }
+    #header-main a {
+      width: auto; }
+    #header-main a:hover {
+      color: #9C27B0; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

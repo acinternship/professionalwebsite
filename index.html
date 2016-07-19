@@ -12,31 +12,13 @@
   </head>
   
   <body>
-    <header class="flex-col width-full">
-      <div id="hidden-menu">
-        <a>
-          <div class="flex-row header-option" id="header-drawings">
-            <i class="icon ion-ios-compose-outline"></i>
-            drawings
-          </div>
+    
+    <header class="flex-col" id="header-container">
+      <div class="flex-row flex-spacebetween header-bar" id="header-main">
+        <a onclick="headerSlider('header-container')">
+          <i class="icon ion-navicon"></i>
         </a>
-        <a>
-          <div class="flex-row header-option" id="header-design">
-            <i class="icon ion-ios-browsers-outline"></i>
-            design
-          </div>
-        </a>
-        <a>
-          <div class="flex-row header-option" id="header-work">
-            <i class="icon ion-ios-briefcase-outline"></i>
-            work
-          </div>
-        </a>
-      </div>
-      
-      <div class="flex-row flex-spacebetween header-option" id="header-main">
-        <i class="icon ion-navicon"></i>
-        <a onclick="slideIn('hidden-menu')">
+        <a onclick="slideOut('header-container')">
           <i class="icon ion-ios-arrow-up"></i>
         </a>
       </div>
@@ -45,6 +27,7 @@
     <aside class="flex-col">
       <div class="flex-col profile">
         <img src="img/profile.jpeg" alt="Pedro Felipe Froes">
+        
         <span>Hello</span>
         <span>
           My name is Pedro<br>
@@ -53,7 +36,53 @@
           programming and creativity together.<br>
           Check out some of my work below!
         </span>
+        
+        <div class="social-container flex-row">
+          <a>
+            <i class="icon ion-social-facebook-outline"></i>
+          </a>
+          <a>
+            <i class="icon ion-social-linkedin-outline"></i>
+          </a>
+          <a>
+            <i class="icon ion-ios-email-outline"></i>
+          </a>
+        </div>
       </div>
     </aside>
+    
+    <div class="content">
+      <header class="flex-col" id="header-container">
+        <a>
+          <div class="header-bar" id="header-drawings">
+            <i class="icon ion-ios-compose-outline"></i>
+            <span>drawings</span>
+          </div>
+        </a>
+        
+        <section id="work-section"></section>
+        
+        <a>
+          <div class="header-bar" id="header-design">
+            <i class="icon ion-ios-browsers-outline"></i>
+            <span>design</span>
+          </div>
+        </a>
+        
+        <section id="design-section"></section>
+        
+        <a>
+          <div class="header-bar" id="header-work">
+            <i class="icon ion-ios-briefcase-outline"></i>
+            <span>work</span>
+          </div>
+        </a>
+        
+        <section id="drawings-section"></section>
+        
+        <div class="flex-row flex-spacebetween header-bar" id="header-main">
+      </div>
+    </header>  
+    </div>
   </body>
 </html>
