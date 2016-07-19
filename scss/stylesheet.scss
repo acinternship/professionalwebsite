@@ -45,7 +45,6 @@ $thin: 200;
 * {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 a:hover {
@@ -53,31 +52,8 @@ a:hover {
 }
 
 // CLASSES
-.social-container {
-  margin: 1em 0;
-  width: auto;
-  
-  a {
-    border: 1px solid $black;
-    border-radius: 50%;
-    height: 2em;
-    line-height: 2em;
-    margin: 0 .5em;
-    text-align: center;
-    transition: all 250ms ease-in-out;
-    width: 2em;
-  }
-  
-  a:hover {
-    border: 1px solid $purple;
-    color: $purple;
-  }
-  
-  i {
-    font-size: 1.5em;
-  }
-}
 
+// CLASSES/Display
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -93,77 +69,158 @@ a:hover {
   justify-content: space-between;
 }
 
-.header-bar {
-  color: #FFFFFF;
+// CLASSES/Containers
+.container-contact {
+  @extend .flex-col;
+  @extend .flex-spacebetween;
+  
+  background-color: $black;
+  color: $white;
   font-family: $serif;
-  font-size: 2em;
+  padding: 1em 0;
+  
+  span {
+    font-size: .8em;
+    font-weight: $thin;
+    text-align: center;
+    
+    &:last-of-type {
+      font-size: .6em;
+    }
+    
+    a {
+      color: $white;
+      font-weight: $bold;
+      text-decoration: none;
+      transition: color 250ms ease-in-out;
+      
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  
+  .container-social {
+    @extend .flex-row, .flex-spacebetween;
+    margin: .5em 0;
+    
+    a {
+      color: $white;
+      border: 1px solid $white;
+      border-radius: 50%;
+      font-size: 1.25em;
+      height: 1.5em;
+      line-height: 1.5em;
+      margin: 0 .25em;
+      text-align: center;
+      transition: all 250ms ease-in-out;
+      width: 1.5em;
+      
+      &:hover {
+        border: 1px solid $purple;
+        color: $purple;
+      }
+    }
+  }
+}
+
+.container-content {
+  i {
+    padding: 0 .5em;
+  }
+}
+
+.container-header {
+  .header-bar {
+    @extend .flex-col;
+    
+    background-color: $black;
+    margin: 0;
+    
+    a:hover {
+      i {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.container-profile {
+  @extend .flex-col;
+  
+  color: $black;
+  font-family: $serif;
+  margin-bottom: 2em;
+  margin-top: 1em;
+    
+  img {
+    border-radius: 50%;
+    display: block;
+    margin: 1em 0;
+    width: 50%;
+  }
+
+  span {
+    font-family: $serif;
+    font-weight: $thin;
+    text-align: center;
+  }
+
+  span:first-of-type {
+    font-size: 3em;
+  }
+}
+
+.header-bar {
+  color: $white;
+  font-family: $serif;
   font-weight: $thin;
-  height: 1.5em;
+  height: 2em;
+  line-height: 2em;
   margin: .25em 0;
-  transition: all 250ms ease-in-out;
   
   i, span {
-    padding: 0 .5em;
     transition: all 250ms ease-in-out;
   }
 }
 
 .header-bar:hover {
-  a > i, a > span {
-    transform: scale(1.15);
+  i, span {
+    transform: scale(1.5);
   }
 }
 
-.header-container {
-  .header-bar {
-    background-position: left;
-    background-size: auto;
-  }
+#header-design {
+  background-color: $green;
 }
 
-.profile {
-    margin: 2em 0;
-    
-    img {
-      border-radius: 50%;
-      display: block;
-      padding: 1em 0;
-      width: 50%;
-    }
-    
-    span {
-      font-family: $serif;
-      font-weight: $thin;
-      text-align: center;
-    }
-    
-    span:first-of-type {
-      font-size: 3em;
-    }
-  }
-
-.width-full {
-  width: 100%;
+#header-drawings {
+  background-color: $red;
 }
+
+#header-work {
+  background-color: $blue;
+}
+
 
 // IDS
-#header-design {
+#header-design2 {
   background-color: $green;
   background-image: url(../img/header/design.png);
   margin: 0;
 }
 
-#header-drawings {
+#header-drawings2 {
   background-color: $red;
   background-image: url(../img/header/drawings.png);
 }
 
-#header-work {
+#header-work2 {
   background-color: $blue;
   background-image: url(../img/header/work.png);
 }
 
-#header-design:hover, #header-drawings:hover, #header-work:hover {
+#header-design:hover2, #header-drawings:hover2, #header-work:hover {
   background-position: right;
 }
 
@@ -179,42 +236,17 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .profile {
-    margin: 2em 0;
-    
-    img {
-      display: block;
-      padding: 1em 0;
-      width: 50%;
-    }
-    
-    span {
-      font-family: $serif;
-      font-weight: $thin;
-      text-align: center;
-    }
-    
-    span:first-of-type {
-      font-size: 3em;
-    }
-  }
-  
-  #header-container {
-//    position: relative;
-//    top: 0;
-  }
-  
-  #header-main {
-    background-color: $black;
-    height: 2em;
-    margin: 0;
-    
-    a {
-      width: auto;
-    }
-    
-    a:hover {
-      color: $purple;
-    }
-  }
+//  #header-main {
+//    background-color: $black;
+//    height: 2em;
+//    margin: 0;
+//    
+//    a {
+//      width: auto;
+//    }
+//    
+//    a:hover {
+//      color: $purple;
+//    }
+//  }
 }
