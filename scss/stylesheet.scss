@@ -1,8 +1,9 @@
 /* SCSS organized alphabetically
  * in the following order:
  *
- * IMPORTS & VARIABLES
+ * IMPORTS, MIXINS & VARIABLES
  *    Imports
+ *    Mixins
  *    Colors
  *    Fonts
  *    Font weights
@@ -10,10 +11,11 @@
  * STYLE
  *    Tags
  *    Classes
+ *      Display
+ *      Containers
  *    IDs
  *
  * @ RULES
- *    Mixins
  *    Media Queries
  */
 
@@ -21,6 +23,15 @@
 
 // IMPORTS
 @import 'https://fonts.googleapis.com/css?family=Assistant:200,400,600';
+
+// MIXINS
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
 
 // COLORS
 $black: #212121;
@@ -41,7 +52,6 @@ $thin: 200;
 /* STYLE */
 
 // TAGS
-
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +62,6 @@ a:hover {
 }
 
 // CLASSES
-
 // CLASSES/Display
 .flex-col {
   display: flex;
@@ -77,6 +86,7 @@ a:hover {
   background-color: $black;
   color: $white;
   font-family: $serif;
+  margin-top: .25em;
   padding: 1em 0;
   
   span {
@@ -125,8 +135,57 @@ a:hover {
 }
 
 .container-content {
+  color: $white;
+  font-family: $serif;
+  
   i {
     padding: 0 .5em;
+  }
+  
+  .content-box {
+    @extend .flex-col;
+    
+    align-items: flex-start;
+    padding-bottom: 1em;
+    
+    .experience-box {
+      @extend .flex-row;
+      
+      height: 3em;
+      margin: .25em 0;
+      
+      .experience-description {
+        span {
+          display: block;
+        }
+        
+        span:first-of-type {
+          font-weight: $bold;
+        }
+        
+        span:nth-child(2) {
+          font-size: .6em;
+          font-weight: $thin;
+        }
+      }
+      
+      .experience-logo {
+        width: 2.5em;
+        padding: 0 .5em;
+      }
+      
+      .experience-time {
+        @include rotate(-90deg);
+        
+        font-size: .6em;
+        text-align: center;
+        
+        span {
+          font-size: .8em;
+          font-weight: $thin;
+        }
+      }
+    }
   }
 }
 
@@ -177,19 +236,10 @@ a:hover {
   font-weight: $thin;
   height: 2em;
   line-height: 2em;
-  margin: .25em 0;
-  
-  i, span {
-    transition: all 250ms ease-in-out;
-  }
+  margin-top: .25em;
 }
 
-.header-bar:hover {
-  i, span {
-    transform: scale(1.5);
-  }
-}
-
+// IDS
 #header-design {
   background-color: $green;
 }
@@ -198,35 +248,11 @@ a:hover {
   background-color: $red;
 }
 
-#header-work {
+#header-work, #content-work {
   background-color: $blue;
-}
-
-
-// IDS
-#header-design2 {
-  background-color: $green;
-  background-image: url(../img/header/design.png);
-  margin: 0;
-}
-
-#header-drawings2 {
-  background-color: $red;
-  background-image: url(../img/header/drawings.png);
-}
-
-#header-work2 {
-  background-color: $blue;
-  background-image: url(../img/header/work.png);
-}
-
-#header-design:hover2, #header-drawings:hover2, #header-work:hover {
-  background-position: right;
 }
 
 /* @ RULES */
-
-// MIXINS
 
 // MEDIA QUERIES
 @media (min-width: 800px) {
@@ -236,17 +262,4 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-//  #header-main {
-//    background-color: $black;
-//    height: 2em;
-//    margin: 0;
-//    
-//    a {
-//      width: auto;
-//    }
-//    
-//    a:hover {
-//      color: $purple;
-//    }
-//  }
 }

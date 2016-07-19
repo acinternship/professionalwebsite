@@ -1,8 +1,9 @@
 /* SCSS organized alphabetically
  * in the following order:
  *
- * IMPORTS & VARIABLES
+ * IMPORTS, MIXINS & VARIABLES
  *    Imports
+ *    Mixins
  *    Colors
  *    Fonts
  *    Font weights
@@ -10,10 +11,11 @@
  * STYLE
  *    Tags
  *    Classes
+ *      Display
+ *      Containers
  *    IDs
  *
  * @ RULES
- *    Mixins
  *    Media Queries
  */
 /* IMPORTS & VARIABLES */
@@ -26,12 +28,12 @@
 a:hover {
   cursor: pointer; }
 
-.flex-col, .container-contact, .container-header .header-bar, .container-profile {
+.flex-col, .container-contact, .container-content .content-box, .container-header .header-bar, .container-profile {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-.flex-row, .container-contact .container-social {
+.flex-row, .container-contact .container-social, .container-content .content-box .experience-box {
   display: flex;
   align-items: center; }
 
@@ -42,6 +44,7 @@ a:hover {
   background-color: #212121;
   color: #FFFFFF;
   font-family: "Assistant", sans-serif;
+  margin-top: .25em;
   padding: 1em 0; }
   .container-contact span {
     font-size: .8em;
@@ -73,8 +76,38 @@ a:hover {
         border: 1px solid #9C27B0;
         color: #9C27B0; }
 
-.container-content i {
-  padding: 0 .5em; }
+.container-content {
+  color: #FFFFFF;
+  font-family: "Assistant", sans-serif; }
+  .container-content i {
+    padding: 0 .5em; }
+  .container-content .content-box {
+    align-items: flex-start;
+    padding-bottom: 1em; }
+    .container-content .content-box .experience-box {
+      height: 3em;
+      margin: .25em 0; }
+      .container-content .content-box .experience-box .experience-description span {
+        display: block; }
+      .container-content .content-box .experience-box .experience-description span:first-of-type {
+        font-weight: 600; }
+      .container-content .content-box .experience-box .experience-description span:nth-child(2) {
+        font-size: .6em;
+        font-weight: 200; }
+      .container-content .content-box .experience-box .experience-logo {
+        width: 2.5em;
+        padding: 0 .5em; }
+      .container-content .content-box .experience-box .experience-time {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        font-size: .6em;
+        text-align: center; }
+        .container-content .content-box .experience-box .experience-time span {
+          font-size: .8em;
+          font-weight: 200; }
 
 .container-header .header-bar {
   background-color: #212121;
@@ -105,12 +138,7 @@ a:hover {
   font-weight: 200;
   height: 2em;
   line-height: 2em;
-  margin: .25em 0; }
-  .header-bar i, .header-bar span {
-    transition: all 250ms ease-in-out; }
-
-.header-bar:hover i, .header-bar:hover span {
-  transform: scale(1.5); }
+  margin-top: .25em; }
 
 #header-design {
   background-color: #4CAF50; }
@@ -118,24 +146,8 @@ a:hover {
 #header-drawings {
   background-color: #F44336; }
 
-#header-work {
+#header-work, #content-work {
   background-color: #3F51B5; }
-
-#header-design2 {
-  background-color: #4CAF50;
-  background-image: url(../img/header/design.png);
-  margin: 0; }
-
-#header-drawings2 {
-  background-color: #F44336;
-  background-image: url(../img/header/drawings.png); }
-
-#header-work2 {
-  background-color: #3F51B5;
-  background-image: url(../img/header/work.png); }
-
-#header-design:hover2, #header-drawings:hover2, #header-work:hover {
-  background-position: right; }
 
 /* @ RULES */
 
