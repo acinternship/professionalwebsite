@@ -121,9 +121,26 @@ a:hover {
   }
 }
 
-.profile > img {
-  border-radius: 50%;
-}
+.profile {
+    margin: 2em 0;
+    
+    img {
+      border-radius: 50%;
+      display: block;
+      padding: 1em 0;
+      width: 50%;
+    }
+    
+    span {
+      font-family: $serif;
+      font-weight: $thin;
+      text-align: center;
+    }
+    
+    span:first-of-type {
+      font-size: 3em;
+    }
+  }
 
 .width-full {
   width: 100%;

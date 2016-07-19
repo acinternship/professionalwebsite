@@ -76,8 +76,19 @@ a:hover {
   background-position: left;
   background-size: auto; }
 
-.profile > img {
-  border-radius: 50%; }
+.profile {
+  margin: 2em 0; }
+  .profile img {
+    border-radius: 50%;
+    display: block;
+    padding: 1em 0;
+    width: 50%; }
+  .profile span {
+    font-family: "Assistant", sans-serif;
+    font-weight: 200;
+    text-align: center; }
+  .profile span:first-of-type {
+    font-size: 3em; }
 
 .width-full {
   width: 100%; }
