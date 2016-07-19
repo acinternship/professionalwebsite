@@ -1,0 +1,154 @@
+/* SCSS organized alphabetically
+ * in the following order:
+ *
+ * IMPORTS, MIXINS & VARIABLES
+ *    Imports
+ *    Mixins
+ *    Colors
+ *    Fonts
+ *    Font weights
+ *
+ * STYLE
+ *    Tags
+ *    Classes
+ *      Display
+ *      Containers
+ *    IDs
+ *
+ * @ RULES
+ *    Media Queries
+ */
+/* IMPORTS & VARIABLES */
+@import "https://fonts.googleapis.com/css?family=Assistant:200,400,600";
+/* STYLE */
+* {
+  margin: 0;
+  padding: 0; }
+
+a:hover {
+  cursor: pointer; }
+
+.flex-col, .container-contact, .container-content .content-box, .container-header .header-bar, .container-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flex-row, .container-contact .container-social, .container-content .content-box .experience-box {
+  display: flex;
+  align-items: center; }
+
+.flex-spacebetween, .container-contact, .container-contact .container-social {
+  justify-content: space-between; }
+
+.container-contact {
+  background-color: #212121;
+  color: #FFFFFF;
+  font-family: "Assistant", sans-serif;
+  margin-top: .25em;
+  padding: 1em 0; }
+  .container-contact span {
+    font-size: .8em;
+    font-weight: 200;
+    text-align: center; }
+    .container-contact span:last-of-type {
+      font-size: .6em; }
+    .container-contact span a {
+      color: #FFFFFF;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 250ms ease-in-out; }
+      .container-contact span a:hover {
+        color: #9C27B0; }
+  .container-contact .container-social {
+    margin: .5em 0; }
+    .container-contact .container-social a {
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 50%;
+      font-size: 1.25em;
+      height: 1.5em;
+      line-height: 1.5em;
+      margin: 0 .25em;
+      text-align: center;
+      transition: all 250ms ease-in-out;
+      width: 1.5em; }
+      .container-contact .container-social a:hover {
+        border: 1px solid #9C27B0;
+        color: #9C27B0; }
+
+.container-content {
+  color: #FFFFFF;
+  font-family: "Assistant", sans-serif; }
+  .container-content i {
+    padding: 0 .5em; }
+  .container-content .content-box {
+    align-items: flex-start;
+    padding-bottom: 1em; }
+    .container-content .content-box .experience-box {
+      height: 3em;
+      margin: .25em 0; }
+      .container-content .content-box .experience-box .experience-description span {
+        display: block; }
+      .container-content .content-box .experience-box .experience-description span:first-of-type {
+        font-weight: 600; }
+      .container-content .content-box .experience-box .experience-description span:nth-child(2) {
+        font-size: .6em;
+        font-weight: 200; }
+      .container-content .content-box .experience-box .experience-logo {
+        width: 2.5em;
+        padding: 0 .5em; }
+      .container-content .content-box .experience-box .experience-time {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        font-size: .6em;
+        text-align: center; }
+        .container-content .content-box .experience-box .experience-time span {
+          font-size: .8em;
+          font-weight: 200; }
+
+.container-header .header-bar {
+  background-color: #212121;
+  margin: 0; }
+  .container-header .header-bar a:hover i {
+    transform: scale(1.5); }
+
+.container-profile {
+  color: #212121;
+  font-family: "Assistant", sans-serif;
+  margin-bottom: 2em;
+  margin-top: 1em; }
+  .container-profile img {
+    border-radius: 50%;
+    display: block;
+    margin: 1em 0;
+    width: 50%; }
+  .container-profile span {
+    font-family: "Assistant", sans-serif;
+    font-weight: 200;
+    text-align: center; }
+  .container-profile span:first-of-type {
+    font-size: 3em; }
+
+.header-bar {
+  color: #FFFFFF;
+  font-family: "Assistant", sans-serif;
+  font-weight: 200;
+  height: 2em;
+  line-height: 2em;
+  margin-top: .25em; }
+
+#header-design {
+  background-color: #4CAF50; }
+
+#header-drawings {
+  background-color: #F44336; }
+
+#header-work, #content-work {
+  background-color: #3F51B5; }
+
+/* @ RULES */
+
+/*# sourceMappingURL=stylesheet.css.map */

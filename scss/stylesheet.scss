@@ -1,0 +1,265 @@
+/* SCSS organized alphabetically
+ * in the following order:
+ *
+ * IMPORTS, MIXINS & VARIABLES
+ *    Imports
+ *    Mixins
+ *    Colors
+ *    Fonts
+ *    Font weights
+ *
+ * STYLE
+ *    Tags
+ *    Classes
+ *      Display
+ *      Containers
+ *    IDs
+ *
+ * @ RULES
+ *    Media Queries
+ */
+
+/* IMPORTS & VARIABLES */
+
+// IMPORTS
+@import 'https://fonts.googleapis.com/css?family=Assistant:200,400,600';
+
+// MIXINS
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+// COLORS
+$black: #212121;
+$blue: #3F51B5;
+$green: #4CAF50;
+$purple: #9C27B0;
+$red: #F44336;
+$white: #FFFFFF;
+
+// FONTS
+$serif: 'Assistant', sans-serif;
+
+// FONT WEIGHTS
+$bold: 600;
+$regular: 400;
+$thin: 200;
+
+/* STYLE */
+
+// TAGS
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+// CLASSES
+// CLASSES/Display
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center
+}
+
+.flex-spacebetween {
+  justify-content: space-between;
+}
+
+// CLASSES/Containers
+.container-contact {
+  @extend .flex-col;
+  @extend .flex-spacebetween;
+  
+  background-color: $black;
+  color: $white;
+  font-family: $serif;
+  margin-top: .25em;
+  padding: 1em 0;
+  
+  span {
+    font-size: .8em;
+    font-weight: $thin;
+    text-align: center;
+    
+    &:last-of-type {
+      font-size: .6em;
+    }
+    
+    a {
+      color: $white;
+      font-weight: $bold;
+      text-decoration: none;
+      transition: color 250ms ease-in-out;
+      
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  
+  .container-social {
+    @extend .flex-row, .flex-spacebetween;
+    margin: .5em 0;
+    
+    a {
+      color: $white;
+      border: 1px solid $white;
+      border-radius: 50%;
+      font-size: 1.25em;
+      height: 1.5em;
+      line-height: 1.5em;
+      margin: 0 .25em;
+      text-align: center;
+      transition: all 250ms ease-in-out;
+      width: 1.5em;
+      
+      &:hover {
+        border: 1px solid $purple;
+        color: $purple;
+      }
+    }
+  }
+}
+
+.container-content {
+  color: $white;
+  font-family: $serif;
+  
+  i {
+    padding: 0 .5em;
+  }
+  
+  .content-box {
+    @extend .flex-col;
+    
+    align-items: flex-start;
+    padding-bottom: 1em;
+    
+    .experience-box {
+      @extend .flex-row;
+      
+      height: 3em;
+      margin: .25em 0;
+      
+      .experience-description {
+        span {
+          display: block;
+        }
+        
+        span:first-of-type {
+          font-weight: $bold;
+        }
+        
+        span:nth-child(2) {
+          font-size: .6em;
+          font-weight: $thin;
+        }
+      }
+      
+      .experience-logo {
+        width: 2.5em;
+        padding: 0 .5em;
+      }
+      
+      .experience-time {
+        @include rotate(-90deg);
+        
+        font-size: .6em;
+        text-align: center;
+        
+        span {
+          font-size: .8em;
+          font-weight: $thin;
+        }
+      }
+    }
+  }
+}
+
+.container-header {
+  .header-bar {
+    @extend .flex-col;
+    
+    background-color: $black;
+    margin: 0;
+    
+    a:hover {
+      i {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.container-profile {
+  @extend .flex-col;
+  
+  color: $black;
+  font-family: $serif;
+  margin-bottom: 2em;
+  margin-top: 1em;
+    
+  img {
+    border-radius: 50%;
+    display: block;
+    margin: 1em 0;
+    width: 50%;
+  }
+
+  span {
+    font-family: $serif;
+    font-weight: $thin;
+    text-align: center;
+  }
+
+  span:first-of-type {
+    font-size: 3em;
+  }
+}
+
+.header-bar {
+  color: $white;
+  font-family: $serif;
+  font-weight: $thin;
+  height: 2em;
+  line-height: 2em;
+  margin-top: .25em;
+}
+
+// IDS
+#header-design {
+  background-color: $green;
+}
+
+#header-drawings {
+  background-color: $red;
+}
+
+#header-work, #content-work {
+  background-color: $blue;
+}
+
+/* @ RULES */
+
+// MEDIA QUERIES
+@media (min-width: 800px) {
+}
+
+@media (min-width: 481px) and (max-width: 799px) {
+}
+
+@media (max-width: 480px) {
+}
