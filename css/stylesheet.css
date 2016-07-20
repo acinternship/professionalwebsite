@@ -75,8 +75,6 @@ a:hover {
       text-align: center;
       transition: all 250ms ease-in-out;
       width: 1.5em; }
-      .container-contact .container-social a:active {
-        transform: scale(0.9); }
       .container-contact .container-social a:hover {
         border: 1px solid #9C27B0;
         color: #9C27B0; }
@@ -125,8 +123,7 @@ a:hover {
     .container-content .content-box .work-box {
       padding-bottom: .75em; }
       .container-content .content-box .work-box .experience-box {
-        height: 3.5em;
-        margin-bottom: .25em;
+        margin-bottom: .5em;
         width: 100%; }
         .container-content .content-box .work-box .experience-box .experience-description span {
           display: block; }
