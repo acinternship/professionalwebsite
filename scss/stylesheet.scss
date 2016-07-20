@@ -40,6 +40,7 @@ $green: #4CAF50;
 $purple: #9C27B0;
 $red: #F44336;
 $white: rgb(255, 255, 255);
+$white-transparent: rgba(255, 255, 255, .5);
 
 // FONTS
 $serif: 'Assistant', sans-serif;
@@ -76,6 +77,11 @@ a:hover {
 
 .flex-spacebetween {
   justify-content: space-between;
+}
+
+.rotate-180deg {
+//  @include rotate(180deg);
+  transform: rotate(180deg);
 }
 
 // CLASSES/Containers
@@ -150,70 +156,94 @@ a:hover {
     @extend .flex-col;
     
     align-items: flex-start;
-    padding-bottom: 1em;
     
-    .experience-box {
-      @extend .flex-row;
-      
-      height: 4em;
+    .box-title {
+      border-bottom: 1px solid $white-transparent;
+      font-weight: $thin;
       margin-bottom: .25em;
-      width: 100%;
+      margin-left: 3.5em;
+    }
+    
+    .education-box {
+      height: 3em;
+      margin-left: 3.5em;
+      padding-bottom: .75em;
       
-      .experience-description {
-        span {
-          display: block;
-        }
-        
-        span:first-of-type {
-          font-weight: $bold;
-        }
-        
-        span:nth-child(2) {
-          font-size: .6em;
-          font-weight: $thin;
-        }
-        
-        span:last-of-type {
-          font-size: .6em;
-          font-weight: $regular;
-        }
+      span {
+        display: block;
       }
       
-      .experience-logo {
-        width: 2.5em;
-        padding: 0 .5em;
+      span:first-of-type {
+        font-weight: $bold;
+      }
+      
+      span:nth-child(2) {
+        font-size: .6em;
+        font-weight: $thin;
+      }
+      
+      span:last-of-type {
+        font-size: .6em;
+        font-weight: $regular;
       }
     }
     
-    .experience-skills {
-      @extend .flex-col;
+    .skills-box {
+      @extend .flex-row;
       
       align-items: flex-start;
-      margin-top: .5em;
-      padding-left: 3.5em;
-      padding-top: .5em;
+      flex-flow: wrap;
+      margin-left: 3.5em;
+      padding-bottom: .75em;
+      padding-top: .25em;
       
-      span:first-of-type:not(.skill-item) {
-        font-weight: $thin;
-        margin-bottom: .25em;
-        margin-bottom: .25em;
+      .skill-item {
+        border: 1px solid $white;
+        border-radius: 1em;
+        font-size: .7em;
+        margin-right: .25em;
+        margin-bottom: .5em;
+        padding: .1em .5em;
+
+        i {
+          padding: 0 .25em;
+        }
       }
+    }
+    
+    .work-box {
+      padding-bottom: .75em;
       
-      .skills {
+      .experience-box {
         @extend .flex-row;
-        flex-flow: wrap;
-        
-        .skill-item {
-          border: 1px solid $white;
-          border-radius: 1em;
-          font-size: .7em;
-          margin-right: .25em;
-          margin-bottom: .5em;
-          padding: .1em .5em;
-          
-          i {
-            padding: 0 .25em;
+
+        height: 3.5em;
+        margin-bottom: .25em;
+        width: 100%;
+
+        .experience-description {
+          span {
+            display: block;
           }
+
+          span:first-of-type {
+            font-weight: $bold;
+          }
+
+          span:nth-child(2) {
+            font-size: .6em;
+            font-weight: $thin;
+          }
+
+          span:last-of-type {
+            font-size: .6em;
+            font-weight: $regular;
+          }
+        }
+
+        .experience-logo {
+          width: 2.5em;
+          padding: 0 .5em;
         }
       }
     }
@@ -268,22 +298,28 @@ a:hover {
   height: 2.5em;
   line-height: 2.5em;
   margin-top: .25em;
+  
+  i:last-of-type {
+    float: right;
+    padding: 0 1em;
+    transition: all 250ms ease-in-out;
+  }
 }
 
 // IDS
-#content-work {
+#content-design, #content-drawings, #content-work {
   display: none;
 }
 
-#header-design {
+#content-design, #header-design {
   background-color: $green;
 }
 
-#header-drawings {
+#content-drawings, #header-drawings {
   background-color: $red;
 }
 
-#header-work, #content-work {
+#content-work, #header-work {
   background-color: $blue;
 }
 

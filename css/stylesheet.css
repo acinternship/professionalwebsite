@@ -28,17 +28,20 @@
 a:hover {
   cursor: pointer; }
 
-.flex-col, .container-contact, .container-content .content-box, .container-content .content-box .experience-skills, .container-header .header-bar, .container-profile {
+.flex-col, .container-contact, .container-content .content-box, .container-header .header-bar, .container-profile {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-.flex-row, .container-contact .container-social, .container-content .content-box .experience-box, .container-content .content-box .experience-skills .skills {
+.flex-row, .container-contact .container-social, .container-content .content-box .skills-box, .container-content .content-box .work-box .experience-box {
   display: flex;
   align-items: center; }
 
 .flex-spacebetween, .container-contact, .container-contact .container-social {
   justify-content: space-between; }
+
+.rotate-180deg {
+  transform: rotate(180deg); }
 
 .container-contact {
   background-color: #212121;
@@ -84,45 +87,60 @@ a:hover {
   .container-content i {
     padding: 0 .5em; }
   .container-content .content-box {
-    align-items: flex-start;
-    padding-bottom: 1em; }
-    .container-content .content-box .experience-box {
-      height: 4em;
+    align-items: flex-start; }
+    .container-content .content-box .box-title {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      font-weight: 200;
       margin-bottom: .25em;
-      width: 100%; }
-      .container-content .content-box .experience-box .experience-description span {
+      margin-left: 3.5em; }
+    .container-content .content-box .education-box {
+      height: 3em;
+      margin-left: 3.5em;
+      padding-bottom: .75em; }
+      .container-content .content-box .education-box span {
         display: block; }
-      .container-content .content-box .experience-box .experience-description span:first-of-type {
+      .container-content .content-box .education-box span:first-of-type {
         font-weight: 600; }
-      .container-content .content-box .experience-box .experience-description span:nth-child(2) {
+      .container-content .content-box .education-box span:nth-child(2) {
         font-size: .6em;
         font-weight: 200; }
-      .container-content .content-box .experience-box .experience-description span:last-of-type {
+      .container-content .content-box .education-box span:last-of-type {
         font-size: .6em;
         font-weight: 400; }
-      .container-content .content-box .experience-box .experience-logo {
-        width: 2.5em;
-        padding: 0 .5em; }
-    .container-content .content-box .experience-skills {
+    .container-content .content-box .skills-box {
       align-items: flex-start;
-      margin-top: .5em;
-      padding-left: 3.5em;
-      padding-top: .5em; }
-      .container-content .content-box .experience-skills span:first-of-type:not(.skill-item) {
-        font-weight: 200;
+      flex-flow: wrap;
+      margin-left: 3.5em;
+      padding-bottom: .75em;
+      padding-top: .25em; }
+      .container-content .content-box .skills-box .skill-item {
+        border: 1px solid white;
+        border-radius: 1em;
+        font-size: .7em;
+        margin-right: .25em;
+        margin-bottom: .5em;
+        padding: .1em .5em; }
+        .container-content .content-box .skills-box .skill-item i {
+          padding: 0 .25em; }
+    .container-content .content-box .work-box {
+      padding-bottom: .75em; }
+      .container-content .content-box .work-box .experience-box {
+        height: 3.5em;
         margin-bottom: .25em;
-        margin-bottom: .25em; }
-      .container-content .content-box .experience-skills .skills {
-        flex-flow: wrap; }
-        .container-content .content-box .experience-skills .skills .skill-item {
-          border: 1px solid white;
-          border-radius: 1em;
-          font-size: .7em;
-          margin-right: .25em;
-          margin-bottom: .5em;
-          padding: .1em .5em; }
-          .container-content .content-box .experience-skills .skills .skill-item i {
-            padding: 0 .25em; }
+        width: 100%; }
+        .container-content .content-box .work-box .experience-box .experience-description span {
+          display: block; }
+        .container-content .content-box .work-box .experience-box .experience-description span:first-of-type {
+          font-weight: 600; }
+        .container-content .content-box .work-box .experience-box .experience-description span:nth-child(2) {
+          font-size: .6em;
+          font-weight: 200; }
+        .container-content .content-box .work-box .experience-box .experience-description span:last-of-type {
+          font-size: .6em;
+          font-weight: 400; }
+        .container-content .content-box .work-box .experience-box .experience-logo {
+          width: 2.5em;
+          padding: 0 .5em; }
 
 .container-header .header-bar {
   background-color: #212121;
@@ -154,17 +172,21 @@ a:hover {
   height: 2.5em;
   line-height: 2.5em;
   margin-top: .25em; }
+  .header-bar i:last-of-type {
+    float: right;
+    padding: 0 1em;
+    transition: all 250ms ease-in-out; }
 
-#content-work {
+#content-design, #content-drawings, #content-work {
   display: none; }
 
-#header-design {
+#content-design, #header-design {
   background-color: #4CAF50; }
 
-#header-drawings {
+#content-drawings, #header-drawings {
   background-color: #F44336; }
 
-#header-work, #content-work {
+#content-work, #header-work {
   background-color: #3F51B5; }
 
 /* @ RULES */
