@@ -39,7 +39,7 @@ $blue: #3F51B5;
 $green: #4CAF50;
 $purple: #9C27B0;
 $red: #F44336;
-$white: #FFFFFF;
+$white: rgb(255, 255, 255);
 
 // FONTS
 $serif: 'Assistant', sans-serif;
@@ -126,6 +126,10 @@ a:hover {
       transition: all 250ms ease-in-out;
       width: 1.5em;
       
+      &:active {
+        transform: scale(.9);
+      }
+      
       &:hover {
         border: 1px solid $purple;
         color: $purple;
@@ -151,8 +155,9 @@ a:hover {
     .experience-box {
       @extend .flex-row;
       
-      height: 3em;
+      height: 4em;
       margin: .25em 0;
+      width: 100%;
       
       .experience-description {
         span {
@@ -167,23 +172,16 @@ a:hover {
           font-size: .6em;
           font-weight: $thin;
         }
+        
+        span:last-of-type {
+          font-size: .6em;
+          font-weight: $regular;
+        }
       }
       
       .experience-logo {
         width: 2.5em;
         padding: 0 .5em;
-      }
-      
-      .experience-time {
-        @include rotate(-90deg);
-        
-        font-size: .6em;
-        text-align: center;
-        
-        span {
-          font-size: .8em;
-          font-weight: $thin;
-        }
       }
     }
   }
@@ -234,12 +232,16 @@ a:hover {
   color: $white;
   font-family: $serif;
   font-weight: $thin;
-  height: 2em;
-  line-height: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
   margin-top: .25em;
 }
 
 // IDS
+#content-work {
+  display: none;
+}
+
 #header-design {
   background-color: $green;
 }
