@@ -7,10 +7,7 @@
     <!-- Stylesheet & Ionicons -->
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/ionicons.css">
-    
-    <!-- JavaScript -->
-    <script src="index.js" type="text/javascript"></script>
-  </head>
+</head>
   
   <body>
     <!-- Header container -->
@@ -36,74 +33,164 @@
     
     <!-- Content container -->
     <section class="container-content">
-      
-      <!-- Work -->
+      <!-- Work & education -->
       <a>
         <div class="header-bar" id="header-work">
           <i class="icon ion-ios-briefcase-outline"></i>
-          <span>work</span>
+          <span>work & education</span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </div>
+      </a>
+      
+      <div class="content-box" id="content-work">
+        <!-- Education -->
+        <div class="box-title">education</div>
+        <div class="education-box">
+          <span>BS in Computer Engineering</span>
+          <span>01/2014, 12/2017 (in progress)</span>
+          <span>CEFET-MG</span>
         </div>
         
-        <div class="content-box" id="content-work">
+        <!-- Work -->
+        <div class="box-title">work</div>
+        <div class="work-box">
           <div class="experience-box">
-            <div class="experience-time">
-              07/2016<br>
-              <span>CURRENT</span>
-            </div>
-            
             <img src="img/work/avenuecode.png" class="experience-logo">
-            
+
             <div class="experience-description">
               <span>Intern</span>
+              <span>07/2016, current</span>
               <span>Intern at Avenue Code's Job Rotation Program.</span>
             </div>
           </div>
-          
+
           <div class="experience-box">
-            <div class="experience-time">
-              08/2015<br>
-              <span>CURRENT</span>
-            </div>
-            
-            <img class="experience-logo">
-            
+            <img src="img/work/cefet.png" class="experience-logo">
+
             <div class="experience-description">
               <span>Student volunteer</span>
+              <span>08/2015, current</span>
               <span>Front-end developer of a web-hybrid application using Ionic Framework + AngularJs</span>
             </div>
           </div>
-          
+
           <div class="experience-box">
-            <div class="experience-time">
-              04/2015<br>
-              12/2015
-            </div>
-            
-            <img class="experience-logo">
-            
+            <img src="img/work/cefet.png" class="experience-logo">
+
             <div class="experience-description">
               <span>Teacher assistant</span>
+              <span>04/2015, 12/2016</span>
               <span>Computer Graphics TA, working with OpenGL and C/C++ event oriented programming.</span>
             </div>
           </div>
         </div>
-      </a>
+
+        <div class="box-title">skills</div>
+        <div class="skills-box">
+          <span class="skill-item">
+            <i class="icon ion-social-html5"></i>
+            html5
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-css3"></i>
+            css3
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-sass"></i>
+            sass
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-javascript"></i>
+            javascript
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-angular"></i>
+            angular
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-nodejs"></i>
+            nodeJs
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-ionic"></i>
+            ionic 
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-github"></i>
+            git
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-windows"></i>
+            windows
+          </span>
+
+          <span class="skill-item">
+            <i class="icon ion-social-apple"></i>
+            macOS
+          </span>
+        </div>
+      </div>
       
       <!-- Design -->
       <a>
         <div class="header-bar" id="header-design">
           <i class="icon ion-ios-browsers-outline"></i>
           <span>design</span>
+          <i class="icon ion-ios-arrow-down"></i>
         </div>
       </a>
+        
+      <div class="content-box" id="content-design">
+        <div class="box-title">skills</div>
+        <div class="skills-box">
+          <div class="skills">
+            <span class="skill-item">
+              photoshop
+            </span>
+
+            <span class="skill-item">
+              illustrator
+            </span>
+
+            <span class="skill-item">
+              indesign
+            </span>
+
+            <span class="skill-item">
+              blender
+            </span>
+
+            <span class="skill-item">
+              autoCAD
+            </span>
+
+            <span class="skill-item">
+              revit
+            </span>
+          </div>
+        </div>
+      </div>
       
       <!-- Drawings -->
       <a>
         <div class="header-bar" id="header-drawings">
           <i class="icon ion-ios-compose-outline"></i>
           <span>drawings</span>
+          <i class="icon ion-ios-arrow-down"></i>
         </div>
       </a>
+      
+      <div class="content-box" id="content-drawings">
+        
+      </div>
     </section>
     
     <!-- Contact container -->
@@ -131,5 +218,9 @@
         PEDRO FELIPE FROES<br>2016
       </span>
     </section>
+    
+    <!-- jQuery & custom JavaScript   -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
