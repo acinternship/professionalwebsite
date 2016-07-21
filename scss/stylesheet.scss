@@ -64,6 +64,10 @@ a:hover {
 
 // CLASSES
 // CLASSES/Display
+.box-shadow {
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -92,7 +96,7 @@ a:hover {
   background-color: $black;
   color: $white;
   font-family: $serif;
-  margin-top: .25em;
+  margin-top: .5em;
   padding: 1em 0;
   
   span {
@@ -149,6 +153,7 @@ a:hover {
   }
   
   .content-box {
+    @extend .box-shadow;
     @extend .flex-col;
     
     align-items: flex-start;
@@ -161,26 +166,29 @@ a:hover {
     }
     
     .education-box {
-      height: 3em;
-      margin-left: 3.5em;
       padding-bottom: .75em;
-      
-      span {
-        display: block;
-      }
-      
-      span:first-of-type {
-        font-weight: $bold;
-      }
-      
-      span:nth-child(2) {
-        font-size: .6em;
-        font-weight: $thin;
-      }
-      
-      span:last-of-type {
-        font-size: .6em;
-        font-weight: $regular;
+    
+      .education-experience-box {
+        height: 3em;
+        margin-left: 3.5em;
+
+        span {
+          display: block;
+        }
+
+        span:first-of-type {
+          font-weight: $bold;
+        }
+
+        span:nth-child(2) {
+          font-size: .6em;
+          font-weight: $thin;
+        }
+
+        span:last-of-type {
+          font-size: .6em;
+          font-weight: $regular;
+        }
       }
     }
     
@@ -210,7 +218,7 @@ a:hover {
     .work-box {
       padding-bottom: .75em;
       
-      .experience-box {
+      .work-experience-box {
         @extend .flex-row;
         
         margin-bottom: .5em;
@@ -287,17 +295,67 @@ a:hover {
 }
 
 .header-bar {
+  @extend .box-shadow;
+  
   color: $white;
   font-family: $serif;
   font-weight: $thin;
   height: 2.5em;
   line-height: 2.5em;
-  margin-top: .25em;
+  margin-top: .5em;
   
   i:last-of-type {
     float: right;
     padding: 0 1em;
     transition: all 250ms ease-in-out;
+  }
+}
+
+.slider {
+  box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
+  padding-bottom: .75em;
+  overflow: visible;
+  
+  .slide {
+    @extend .flex-row;
+    
+    background-color: $white;
+    height: 15em;
+    justify-content: center;
+    padding: 1em;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .slider-nav {
+    font-size: 2em;
+    height: 2em;
+    margin-top: -2em;
+    text-align: center;
+    
+    i {
+      transition: all 250ms ease-in-out;
+      
+      &:first-of-type {
+        float: left;
+        font-size: 1.5em;
+      }
+      
+      &:hover {
+        cursor: pointer;
+        transform: scale(.8);
+      }
+      
+      &:last-of-type {
+        float: right;
+        font-size: 1.5em;
+      }
+    }
   }
 }
 
@@ -316,6 +374,10 @@ a:hover {
 
 #content-work, #header-work {
   background-color: $blue;
+}
+
+#slider-design {
+  .slider-nav { color: $green; }
 }
 
 /* @ RULES */
