@@ -1,16 +1,19 @@
 $(document).ready(function () {
   // Show/hide content according to button click
   $('#header-work').click(function () {
+    $('#header-work').toggleClass('box-shadow');
     $('#content-work').slideToggle('slow');
     $('#header-work').children('i').toggleClass('rotate-180deg');
   });
   
   $('#header-design').click(function () {
+    $('#header-design').toggleClass('box-shadow');
     $('#content-design').slideToggle('slow');
     $('#header-design').children('i').toggleClass('rotate-180deg');
   });
   
   $('#header-drawings').click(function () {
+    $('#header-drawings').toggleClass('box-shadow');
     $('#content-drawings').slideToggle('slow');
     $('#header-drawings').children('i').toggleClass('rotate-180deg');
   });
