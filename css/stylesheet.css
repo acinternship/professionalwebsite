@@ -28,7 +28,7 @@
 a:hover {
   cursor: pointer; }
 
-.box-shadow, .container-content .content-box, .header-bar {
+.box-shadow, .container-content .content-box, .header-bar, .slider .img-shadow img {
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5); }
 
 .flex-col, .container-contact, .container-content .content-box, .container-header .header-bar, .container-profile {
@@ -143,17 +143,21 @@ a:hover {
           width: 2.5em;
           padding: 0 .5em; }
 
-.container-header .header-bar {
-  background-color: #212121;
-  margin: 0; }
-  .container-header .header-bar a:hover i {
-    transform: scale(1.5); }
+.container-header {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .container-header .header-bar {
+    background-color: #212121;
+    margin: 0; }
+    .container-header .header-bar a:hover i {
+      transform: scale(1.5); }
 
 .container-profile {
   color: #212121;
   font-family: "Assistant", sans-serif;
   margin-bottom: 2em;
-  margin-top: 1em; }
+  margin-top: 2em; }
   .container-profile img {
     border-radius: 50%;
     display: block;
@@ -173,32 +177,40 @@ a:hover {
   height: 2.5em;
   line-height: 2.5em;
   margin-top: .5em; }
+  .header-bar a {
+    color: white; }
   .header-bar i:last-of-type {
     float: right;
     padding: 0 1em;
     transition: all 250ms ease-in-out; }
 
 .slider {
-  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
   padding-bottom: .75em;
   overflow: visible; }
+  .slider .img-shadow img {
+    margin: 0 .5em; }
   .slider .slide {
     background-color: white;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
     height: 15em;
     justify-content: center;
     padding: 1em;
-    transition: all 500ms ease-in-out;
-    z-index: 2; }
+    transition: all 500ms ease-in-out; }
     .slider .slide img {
       max-height: 100%;
       max-width: 100%; }
   .slider .slider-nav {
+    color: #212121;
     font-size: 2em;
     height: 2em;
     margin-top: -2em;
+    opacity: .25;
     text-align: center; }
     .slider .slider-nav i {
       transition: all 250ms ease-in-out; }
+      .slider .slider-nav i:active {
+        color: #9C27B0;
+        outline: none; }
       .slider .slider-nav i:first-of-type {
         float: left;
         font-size: 1.5em; }
@@ -220,9 +232,6 @@ a:hover {
 
 #content-work, #header-work {
   background-color: #3F51B5; }
-
-#slider-design .slider-nav {
-  color: #4CAF50; }
 
 /* @ RULES */
 

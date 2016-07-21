@@ -13,7 +13,9 @@
     <!-- Header container -->
     <header class="container-header">
       <div class="header-bar">
-        <a><i class="icon ion-ios-arrow-down"></i></a>
+        <a href="#contact-card">
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
       </div>
     </header>
     
@@ -130,6 +132,10 @@
             <i class="icon ion-ionic"></i>
             ionic 
           </span>
+          
+          <span class="skill-item">
+            c/c++ 
+          </span>
 
           <span class="skill-item">
             <i class="icon ion-social-github"></i>
@@ -161,7 +167,7 @@
         
         <!-- Logos -->
         <div class="box-title">logos</div>
-        <div id="slider-design" class="slider">
+        <div id="slider-design-logos" class="slider">
           <div class="slide">
             <img src="img/design/logos/playcode_1.png">
           </div>
@@ -182,12 +188,36 @@
           </div>
           
           <div class="slider-nav">
-            <i class="icon ion-ios-arrow-back" onclick="slideSwitch(-1)"></i>
-            <i class="icon ion-ios-arrow-forward" onclick="slideSwitch(+1)"></i>
+            <i class="icon ion-ios-arrow-back" onclick="slideSwitch('#slider-design-logos', -1)"></i>
+            <i class="icon ion-ios-arrow-forward" onclick="slideSwitch('#slider-design-logos', +1)"></i>
           </div>
         </div>
         
         <!-- UI -->
+        <div class="box-title">ui</div>
+        <div id="slider-design-ui" class="slider">
+          <div class="slide img-shadow">
+            <img src="img/design/pokeacad/01.png">
+            <img src="img/design/pokeacad/02.png">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/design/pokeacad/03.png">
+            <img src="img/design/pokeacad/04.png">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/design/pokeacad/05.png">
+            <img src="img/design/pokeacad/06.png">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/design/pokeacad/07.png">
+            <img src="img/design/pokeacad/08.png">
+          </div>
+          
+          <div class="slider-nav">
+            <i class="icon ion-ios-arrow-back" onclick="slideSwitch('#slider-design-ui', -1)"></i>
+            <i class="icon ion-ios-arrow-forward" onclick="slideSwitch('#slider-design-ui', +1)"></i>
+          </div>
+        </div>
         
         <!-- Skills -->
         <div class="box-title">skills</div>
@@ -230,12 +260,64 @@
       </a>
       
       <div class="content-box" id="content-drawings">
+        <div id="slider-drawings" class="slider">
+          <div class="slide img-shadow">
+            <img src="img/drawings/01_singleman.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/02_bluejeans.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/03_paradisecircus.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/04_mona.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/05_brangelina.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/06_lanadelrey.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/07_katyperry.jpg">
+          </div>
+          <div class="slide img-shadow">
+            <img src="img/drawings/08_kurtcobain.jpg">
+          </div>
+          
+          <div class="slider-nav">
+            <i class="icon ion-ios-arrow-back" onclick="slideSwitch('#slider-drawings', -1)"></i>
+            <i class="icon ion-ios-arrow-forward" onclick="slideSwitch('#slider-drawings', +1)"></i>
+          </div>
+        </div>
         
+        <!-- Skills -->
+        <div class="box-title">hobbies</div>
+        <div class="skills-box">
+          <div class="skills">
+            <span class="skill-item">
+              pencil drawing
+            </span>
+
+            <span class="skill-item">
+              watercoloring
+            </span>
+
+            <span class="skill-item">
+              Pokémon training
+            </span>
+
+            <span class="skill-item">
+              Final Fantasy playing
+            </span>
+          </div>
+        </div>
       </div>
     </section>
     
     <!-- Contact container -->
-    <section class="container-contact">
+    <section id="contact-card" class="container-contact">
       <span>Look me up on</span>
       
       <!-- Social networks container -->

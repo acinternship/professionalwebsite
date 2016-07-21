@@ -19,8 +19,8 @@ $(document).ready(function () {
 // Slider
 var slideIndex = 1;
 
-function slideShow(n) {
-  var slideNum = $('#slider-design div').length - 1;
+function slideShow(container, n) {
+  var slideNum = $(container).length - 1;
   
   if (n > slideNum)
     slideIndex = 1;
@@ -29,13 +29,15 @@ function slideShow(n) {
     slideIndex = slideNum;
 
   for (var i = 0; i < slideNum; i++)
-    $('#slider-design div')[i].style.display = 'none';
+    $(container)[i].style.display = 'none';
   
-  $('#slider-design div')[slideIndex-1].style.display = 'flex';
+  $(container)[slideIndex-1].style.display = 'flex';
 }
 
-slideShow(slideIndex);
-
-function slideSwitch(i) {
-  slideShow(slideIndex += i);
+function slideSwitch(container, i) {
+  slideShow(container += ' div', slideIndex += i);
 }
+
+slideShow('#slider-design-logos div', slideIndex);
+slideShow('#slider-design-ui div', slideIndex);
+slideShow('#slider-drawings div', slideIndex);

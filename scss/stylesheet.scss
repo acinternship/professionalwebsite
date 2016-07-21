@@ -254,6 +254,10 @@ a:hover {
 }
 
 .container-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
   .header-bar {
     @extend .flex-col;
     
@@ -274,7 +278,7 @@ a:hover {
   color: $black;
   font-family: $serif;
   margin-bottom: 2em;
-  margin-top: 1em;
+  margin-top: 2em;
     
   img {
     border-radius: 50%;
@@ -304,6 +308,10 @@ a:hover {
   line-height: 2.5em;
   margin-top: .5em;
   
+  a {
+    color: $white;
+  }
+  
   i:last-of-type {
     float: right;
     padding: 0 1em;
@@ -312,19 +320,26 @@ a:hover {
 }
 
 .slider {
-  box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
   padding-bottom: .75em;
   overflow: visible;
+  
+  .img-shadow {
+    img {
+      @extend .box-shadow;
+      
+      margin: 0 .5em;
+    }
+  }
   
   .slide {
     @extend .flex-row;
     
     background-color: $white;
+    box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
     height: 15em;
     justify-content: center;
     padding: 1em;
     transition: all 500ms ease-in-out;
-    z-index: 2;
     
     img {
       max-height: 100%;
@@ -333,13 +348,20 @@ a:hover {
   }
   
   .slider-nav {
+    color: $black;
     font-size: 2em;
     height: 2em;
     margin-top: -2em;
+    opacity: .25;
     text-align: center;
     
     i {
       transition: all 250ms ease-in-out;
+      
+      &:active {
+        color: $purple;
+        outline: none;
+      }
       
       &:first-of-type {
         float: left;
@@ -374,10 +396,6 @@ a:hover {
 
 #content-work, #header-work {
   background-color: $blue;
-}
-
-#slider-design {
-  .slider-nav { color: $green; }
 }
 
 /* @ RULES */
