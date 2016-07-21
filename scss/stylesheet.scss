@@ -170,6 +170,7 @@ a:hover {
     
       .education-experience-box {
         height: 3em;
+        margin-bottom: .5em;
         margin-left: 3.5em;
 
         span {
@@ -320,8 +321,11 @@ a:hover {
 }
 
 .slider {
-  padding-bottom: .75em;
-  overflow: visible;
+  &:nth-of-type(2) {
+    .slide {
+      box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
+    }
+  }
   
   .img-shadow {
     img {
@@ -335,7 +339,6 @@ a:hover {
     @extend .flex-row;
     
     background-color: $white;
-    box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.5);
     height: 15em;
     justify-content: center;
     padding: 1em;
@@ -350,8 +353,8 @@ a:hover {
   .slider-nav {
     color: $black;
     font-size: 2em;
-    height: 2em;
-    margin-top: -2em;
+    height: 5em;
+    margin-top: -5em;
     opacity: .25;
     text-align: center;
     

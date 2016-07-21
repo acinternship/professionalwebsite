@@ -1,5 +1,9 @@
 $(document).ready(function () {
   // Show/hide content according to button click
+  $('#header-top').click(function () {
+    $('#header-top').children('i').toggleClass('rotate-180deg');
+  })
+  
   $('#header-work').click(function () {
     $('#header-work').toggleClass('box-shadow');
     $('#content-work').slideToggle('slow');

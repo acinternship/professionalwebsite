@@ -98,6 +98,7 @@ a:hover {
       padding-bottom: .75em; }
       .container-content .content-box .education-box .education-experience-box {
         height: 3em;
+        margin-bottom: .5em;
         margin-left: 3.5em; }
         .container-content .content-box .education-box .education-experience-box span {
           display: block; }
@@ -184,42 +185,40 @@ a:hover {
     padding: 0 1em;
     transition: all 250ms ease-in-out; }
 
-.slider {
-  padding-bottom: .75em;
-  overflow: visible; }
-  .slider .img-shadow img {
-    margin: 0 .5em; }
-  .slider .slide {
-    background-color: white;
-    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
-    height: 15em;
-    justify-content: center;
-    padding: 1em;
-    transition: all 500ms ease-in-out; }
-    .slider .slide img {
-      max-height: 100%;
-      max-width: 100%; }
-  .slider .slider-nav {
-    color: #212121;
-    font-size: 2em;
-    height: 2em;
-    margin-top: -2em;
-    opacity: .25;
-    text-align: center; }
-    .slider .slider-nav i {
-      transition: all 250ms ease-in-out; }
-      .slider .slider-nav i:active {
-        color: #9C27B0;
-        outline: none; }
-      .slider .slider-nav i:first-of-type {
-        float: left;
-        font-size: 1.5em; }
-      .slider .slider-nav i:hover {
-        cursor: pointer;
-        transform: scale(0.8); }
-      .slider .slider-nav i:last-of-type {
-        float: right;
-        font-size: 1.5em; }
+.slider:nth-of-type(2) .slide {
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5); }
+.slider .img-shadow img {
+  margin: 0 .5em; }
+.slider .slide {
+  background-color: white;
+  height: 15em;
+  justify-content: center;
+  padding: 1em;
+  transition: all 500ms ease-in-out; }
+  .slider .slide img {
+    max-height: 100%;
+    max-width: 100%; }
+.slider .slider-nav {
+  color: #212121;
+  font-size: 2em;
+  height: 5em;
+  margin-top: -5em;
+  opacity: .25;
+  text-align: center; }
+  .slider .slider-nav i {
+    transition: all 250ms ease-in-out; }
+    .slider .slider-nav i:active {
+      color: #9C27B0;
+      outline: none; }
+    .slider .slider-nav i:first-of-type {
+      float: left;
+      font-size: 1.5em; }
+    .slider .slider-nav i:hover {
+      cursor: pointer;
+      transform: scale(0.8); }
+    .slider .slider-nav i:last-of-type {
+      float: right;
+      font-size: 1.5em; }
 
 #content-design, #content-drawings, #content-work {
   display: none; }
